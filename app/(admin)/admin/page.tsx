@@ -2,6 +2,7 @@ import React from 'react';
 import { auth } from '@/auth';
 import { redirect } from 'next/navigation';
 import { createOrUpdateWebsite } from '@/lib/actions/create-website';
+import WebsiteForm from '@/components/(admin)/form/website-form';
 
 const AdminPage = async () => {
   const session = await auth();
@@ -20,7 +21,12 @@ const AdminPage = async () => {
       {hasWebsite ? (
         <p>Your most recent website ID is: {websiteId}</p>
       ) : (
-        <p>No website found. Please create a new website!</p>
+        <>
+          <WebsiteForm 
+
+          userEmail={userEmail}
+          />        
+        </>
       )}
     </div>
   );

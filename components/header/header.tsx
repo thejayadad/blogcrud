@@ -7,12 +7,12 @@ const Header = async () => {
     const session = await auth()
     const userEmail = session?.user?.email
   return (
-    <div className='w-full h-20 border-b'>
-        <div className='flex justify-between h-full px-4 items-center max-w-screen-xl mx-auto'>
-            <div>
-                Logo
-            </div>
-            {
+    <div className='w-full h-16 border-b'>
+        <div className='flex w-full  h-full px-4 items-center max-w-screen-2xl mx-auto'>
+                <div>LOGO</div>
+       
+                <div className='ml-auto flex items-center space-x-4'>
+                {
                 session ? (
                     <>
                         <SignOut />
@@ -23,6 +23,7 @@ const Header = async () => {
                     </>
                 )
             }
+                </div>
         </div>
     </div>
   )
