@@ -14,3 +14,10 @@
 
 # AUTHENICATION FRONT END 
 - add header setup layout
+- add sigin & out buttons
+- start up the app and prisma studio
+- basic or all the way style
+
+
+# HELPER FUNCTION
+- 
